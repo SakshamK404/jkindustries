@@ -1,0 +1,235 @@
+/* ----------------------------------------
+   Navbar Header (sticky + translucent)
+---------------------------------------- */
+.navbar-header {
+  position: sticky;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  background-color: rgba(255, 255, 255, 0.75);
+  backdrop-filter: saturate(180%) blur(10px);
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Add this class via JS when user scrolls past 50px */
+.navbar-header.scrolled {
+  background-color: #ffffff;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* ----------------------------------------
+   Top Section (logo + contact buttons)
+---------------------------------------- */
+.top-bar {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  padding: 1rem 1.5rem;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+@media (min-width: 768px) {
+  .top-bar {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+}
+
+.logo-section {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.logo-img {
+  width: 64px;
+  height: 64px;
+  object-fit: contain;
+}
+
+.company-name {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #111827;
+}
+
+.company-location,
+.company-gst {
+  font-size: 0.875rem;
+  color: #6b7280;
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+}
+
+/* Header Buttons */
+.header-buttons {
+  display: flex;
+  gap: 1rem;
+}
+
+.call-button,
+.enquiry-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.875rem;
+  font-weight: 500;
+  padding: 0.5rem 1rem;
+  border-radius: 0.375rem;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.call-button {
+  border: 1px solid #b91c1c;
+  color: #b91c1c;
+  background-color: #ffffff;
+}
+.call-button:hover,
+.call-button:focus {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(185, 28, 28, 0.2);
+}
+
+.enquiry-button {
+  background-color: #a0331a;
+  color: #ffffff;
+  border: none;
+}
+.enquiry-button:hover,
+.enquiry-button:focus {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(160, 51, 26, 0.3);
+}
+
+/* ----------------------------------------
+   Main Navigation (links + search)
+---------------------------------------- */
+.main-nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.5rem 1.5rem;
+  background-color: transparent;
+  transition: background-color 0.3s ease;
+}
+
+/* Nav Links container */
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  font-size: 0.875rem;
+  font-weight: 500;
+  height: 40px;
+}
+
+/* Individual links */
+.nav-home,
+.nav-link {
+  position: relative;       /* for underline */
+  display: flex;
+  align-items: center;
+  height: 100%;
+  padding: 0 0.5rem;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.nav-home {
+  background-color: #a0331a;
+  color: #ffffff;
+  border-radius: 0.375rem;
+}
+.nav-home:hover,
+.nav-home:focus {
+  background-color: #922d19;
+}
+
+/* Link colors */
+.nav-link {
+  color: #374151;
+}
+.nav-link:hover,
+.nav-link:focus {
+  color: #a0331a;
+}
+
+/* Animated underline */
+.nav-link::after,
+.nav-home::after {
+  content: '';
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background-color: #a0331a;
+  transition: width 0.3s ease;
+}
+
+.nav-link:hover::after,
+.nav-link:focus::after,
+.nav-link.active::after,
+.nav-home::after {
+  width: 100%;
+}
+
+/* ----------------------------------------
+   Search Bar
+---------------------------------------- */
+.search-bar {
+  display: none;
+  align-items: center;
+  border: 1px solid #e5e7eb;
+  border-radius: 0.375rem;
+  overflow: hidden;
+  height: 36px;
+}
+
+@media (min-width: 768px) {
+  .search-bar {
+    display: flex;
+  }
+}
+
+.search-input {
+  flex: 1;
+  padding: 0.5rem 0.75rem;
+  font-size: 0.875rem;
+  border: none;
+  outline: none;
+}
+
+.search-btn {
+  padding: 0.5rem 0.75rem;
+  background-color: #f3f4f6;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* ----------------------------------------
+   Utility & State
+---------------------------------------- */
+/* Example: hide nav-links on mobile and show via JS-toggled .open class */
+@media (max-width: 767px) {
+  .nav-links {
+    display: none;
+  }
+  .nav-links.open {
+    display: flex;
+    flex-direction: column;
+    background: #ffffff;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  }
+}

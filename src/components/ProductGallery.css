@@ -1,0 +1,47 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  /* Section wrapper */
+  .product-gallery {
+    @apply py-16 bg-neutral-100;
+  }
+
+  /* Responsive grid */
+  .product-gallery__grid {
+    @apply grid gap-8
+           grid-cols-1
+           sm:grid-cols-2
+           lg:grid-cols-4;
+  }
+
+  /* Card wrapper */
+  .product-card {
+    @apply cursor-pointer
+           rounded-xl
+           overflow-hidden
+           shadow-md
+           hover:shadow-lg
+           transition-shadow
+           bg-neutral-50;
+  }
+
+  /* Image container: fixed height, centers bottle */
+  .product-card__img-container {
+    @apply w-full h-60
+           flex items-center justify-center
+           bg-white;
+  }
+
+  /* Bottle image: fill container without cropping */
+  .product-card__img {
+    @apply object-contain
+           w-full h-full;
+  }
+
+  /* Name bar */
+  .product-card__name {
+    @apply p-2 text-center font-semibold text-gray-800 bg-white;
+  }
+}
