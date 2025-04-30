@@ -27,7 +27,7 @@ export default function Navbar() {
           <div>
             <h1 className="company-name">JK Industries</h1>
             <p className="company-location">
-              📍 MIDC malegaon. Sinnar Dist nasik, Maharashtra
+              📍 MIDC Malegaon,Sinnar Dist, Nasik, Maharashtra.
             </p>
             <p className="company-gst">
               ✔ GST No. <strong>27AZUPK4892K1ZD</strong>
