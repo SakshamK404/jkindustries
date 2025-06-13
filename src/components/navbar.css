@@ -117,6 +117,14 @@
   transition: background-color 0.3s ease;
 }
 
+.location-link {
+  color: #f91616; /* or a preferred color */
+  text-decoration: underline;
+}
+.location-link:hover {
+  text-decoration: none;
+}
+
 /* Nav Links container */
 .nav-links {
   display: flex;

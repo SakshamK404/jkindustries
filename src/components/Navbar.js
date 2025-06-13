@@ -26,12 +26,24 @@ export default function Navbar() {
           />
           <div>
             <h1 className="company-name">JK Industries</h1>
-            <p className="company-location">
-              📍 MIDC Malegaon,Sinnar Dist, Nasik, Maharashtra.
+            <p className="ISO:">
+              An ISO 9001: 2015 certified company
             </p>
+            <p className="company-location">
+  📍 <a
+    href="https://maps.app.goo.gl/LvevcN4aYGmtadqKA"
+    target="_blank"
+    rel="noopener noreferrer"
+    className="location-link"
+  >
+    MIDC Malegaon, Sinnar Dist, Nasik, Maharashtra
+  </a>
+</p>
+
             <p className="company-gst">
               ✔ GST No. <strong>27AZUPK4892K1ZD</strong>
             </p>
+            
           </div>
         </div>
         <div className="header-buttons">

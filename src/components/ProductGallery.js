@@ -8,7 +8,7 @@ const products = [
   { id: 1, name: 'Ciba Shape',      image: '/ciba-shape.png',      link: '/products/ciba' },
   { id: 2, name: 'Vertical Shape',  image: '/vertical-shape.png',  link: '/products/vertical' },
   { id: 3, name: 'Amway Shape',     image: '/amway-shape.png',     link: '/products/amway' },
-  { id: 4, name: 'Jerry Can',     image: '/right-angle-shape.png', link: '/products/rightangle' },
+  { id: 4, name: 'Jerry Can',     image: '/Jerry can.png', link: '/products/rightangle' },
   { id: 5, name: 'Osin Shape',      image: '/osin-shape.png',      link: '/products/osin' },
   { id: 6, name: 'Oval Jerry',      image: '/oval-jerry.png',      link: '/products/ovaljerry' },
   { id: 7, name: 'Aloe Vera Shape', image: '/aloe-vera-shape.png',  link: '/products/aloevera' },
