@@ -8,10 +8,10 @@ const products = [
   { id: 1, name: 'Ciba Shape',      image: '/ciba-shape.png',      link: '/products/ciba' },
   { id: 2, name: 'Vertical Shape',  image: '/vertical-shape.png',  link: '/products/vertical' },
   { id: 3, name: 'Amway Shape',     image: '/amway-shape.png',     link: '/products/amway' },
-  { id: 4, name: 'Jerry Can',     image: '/Jerry can.png', link: '/products/rightangle' },
+  { id: 4, name: 'Jerry Can',       image: '/Jerry can.png',       link: '/products/rightangle' },
   { id: 5, name: 'Osin Shape',      image: '/osin-shape.png',      link: '/products/osin' },
   { id: 6, name: 'Oval Jerry',      image: '/oval-jerry.png',      link: '/products/ovaljerry' },
-  { id: 7, name: 'Aloe Vera Shape', image: '/aloe-vera-shape.png',  link: '/products/aloevera' },
+  { id: 7, name: 'Aloe Vera Shape', image: '/aloe-vera-shape.png', link: '/products/aloevera' },
 ];
 
 export default function ProductGallery() {
@@ -25,7 +25,10 @@ export default function ProductGallery() {
           <motion.div
             key={p.id}
             className="product-card"
-            onClick={() => navigate(p.link)}
+            onClick={() => {
+              window.scrollTo(0, 0); // Scroll to top before navigating
+              navigate(p.link);
+            }}
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, amount: 0.3 }}

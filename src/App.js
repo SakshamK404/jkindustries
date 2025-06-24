@@ -1,5 +1,5 @@
 import React from "react";
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { BrowserRouter as Router, Routes, Route, Navigate } from "react-router-dom";
 
 import Navbar from "./components/Navbar";
 import About from "./components/About";
@@ -43,6 +43,9 @@ function App() {
         <Route path="/products/ovaljerry" element={<OvalShapeJerry />} />
         <Route path="/products/amway" element={<AmwayShape />} />
         <Route path="/company-brief" element={<CompanyBrief />} />
+
+        {/* ✅ Fallback Route */}
+        <Route path="*" element={<Navigate to="/" replace />} />
       </Routes>
       <FooterComponent />
     </Router>
