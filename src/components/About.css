@@ -1,40 +1,55 @@
-/* About.css */
+/* About.css - Enhanced Modern Styles */
 
 .about-section {
-    padding: 4rem 1rem;
-    background: #f3f4f6; /* light gray */
-  }
-  
-  .about-container {
-    max-width: 800px;
-    margin: 0 auto;
-    text-align: center;
-    padding: 0 1rem;
-  }
-  
-  .about-heading {
-    font-size: 2.25rem;
-    font-weight: 700;
-    color: #1f2937; /* dark slate */
-    margin-bottom: 1.5rem;
-    position: relative;
-  }
-  
-  .about-heading::after {
-    content: "";
-    width: 60px;
-    height: 4px;
-    background-color: #a0331a;
-    display: block;
-    margin: 0.5rem auto 0;
-    border-radius: 2px;
-  }
-  
-  .about-description {
-    font-size: 1.125rem;
-    line-height: 1.75rem;
-    color: #374151; /* slate */
-    max-width: 700px;
-    margin: 0 auto;
-  }
-  
+  padding: 4rem 1rem;
+  background: linear-gradient(120deg, #e0f7fa 0%, #f8fafc 100%);
+  border-radius: 2rem;
+  box-shadow: 0 8px 32px rgba(31, 38, 135, 0.10);
+  margin: 2rem auto;
+  max-width: 1100px;
+}
+
+.about-container {
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: center;
+  padding: 2rem 2rem 2rem 2rem;
+  background: rgba(255,255,255,0.85);
+  border-radius: 1.5rem;
+  box-shadow: 0 4px 24px rgba(20,184,166,0.10);
+}
+
+.about-heading {
+  font-size: 2.75rem;
+  font-weight: 800;
+  color: #2563eb;
+  margin-bottom: 1.5rem;
+  position: relative;
+  background: linear-gradient(90deg, #2563eb, #14b8a6, #22c55e);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  text-shadow: 0 2px 8px rgba(20,184,166,0.08);
+}
+
+.about-heading::after {
+  content: "";
+  width: 80px;
+  height: 5px;
+  background: linear-gradient(90deg, #14b8a6, #2563eb, #22c55e);
+  display: block;
+  margin: 0.5rem auto 0;
+  border-radius: 3px;
+}
+
+.about-description {
+  font-size: 1.25rem;
+  line-height: 2rem;
+  color: #374151;
+  max-width: 700px;
+  margin: 0 auto;
+  padding: 1rem 0;
+  background: rgba(255,255,255,0.7);
+  border-radius: 1rem;
+  box-shadow: 0 2px 8px rgba(20,184,166,0.06);
+}

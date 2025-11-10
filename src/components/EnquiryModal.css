@@ -1,0 +1,144 @@
+/* Enquiry Modal Styles */
+/* Center modal overlay */
+.enquiry-modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(40, 60, 90, 0.18);
+  backdrop-filter: blur(2px);
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  min-width: 100vw;
+}
+.enquiry-modal {
+  background: rgba(255,255,255,0.98);
+  border-radius: 1.5rem;
+  box-shadow: 0 8px 32px rgba(60, 60, 90, 0.18);
+  padding: 2.5rem 2rem 2rem 2rem;
+  min-width: 400px;
+  max-width: 150vw;
+  width: 520px;
+  position: relative;
+  z-index: 1001;
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+  justify-content: center;
+  align-items: center;
+}
+.enquiry-modal h2 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #2d2d3a;
+  margin-bottom: 0.5rem;
+  text-align: center;
+}
+.enquiry-modal form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+/* Adjust grid so inputs fit comfortably */
+/* Stack each input row vertically */
+.enquiry-modal .form-row {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 1rem;
+  width: 100%;
+  margin-bottom: 0.5rem;
+}
+@media (max-width: 700px) {
+  .enquiry-modal {
+    min-width: 95vw;
+    width: 98vw;
+    padding: 1.2rem 0.5rem 1rem 0.5rem;
+  }
+  .enquiry-modal .form-row {
+    grid-template-columns: 1fr;
+    gap: 0.5rem;
+  }
+  .enquiry-modal input {
+    width: 100%;
+  }
+}
+@media (max-width: 600px) {
+  .enquiry-modal .form-row {
+    grid-template-columns: 1fr;
+    gap: 0.5rem;
+  }
+  .enquiry-modal input {
+    width: 100%;
+  }
+}
+.enquiry-modal label {
+  font-weight: 500;
+  color: #3a3a4d;
+  margin-bottom: 0.3rem;
+  min-width: 90px;
+}
+.enquiry-modal input {
+  flex: 1;
+  padding: 0.7rem 1rem;
+  border-radius: 0.7rem;
+  border: 1px solid #b2b7c2;
+  font-size: 1rem;
+  background: #f5f7fa;
+  margin-bottom: 0.2rem;
+  outline: none;
+  transition: border 0.2s;
+}
+.enquiry-modal input:focus {
+  border-color: #6e7a8a;
+}
+.enquiry-modal .modal-actions {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  margin-top: 1rem;
+}
+.enquiry-modal .submit-btn {
+  background: linear-gradient(90deg, #43e97b 0%, #38f9d7 100%);
+  color: #fff;
+  font-weight: 600;
+  padding: 0.7rem 2rem;
+  border-radius: 1rem;
+  border: none;
+  cursor: pointer;
+  box-shadow: 0 2px 8px rgba(60, 60, 90, 0.10);
+  transition: background 0.2s, transform 0.2s;
+}
+.enquiry-modal .submit-btn:hover {
+  background: linear-gradient(90deg, #38f9d7 0%, #43e97b 100%);
+  transform: scale(1.04);
+}
+.enquiry-modal .cancel-btn {
+  background: #e8eaf6;
+  color: #3a3a4d;
+  font-weight: 500;
+  padding: 0.7rem 2rem;
+  border-radius: 1rem;
+  border: none;
+  cursor: pointer;
+  transition: background 0.2s, transform 0.2s;
+}
+.enquiry-modal .cancel-btn:hover {
+  background: #b2b7c2;
+  color: #fff;
+  transform: scale(1.04);
+}
+.enquiry-modal .modal-success {
+  color: #43e97b;
+  font-weight: 600;
+  text-align: center;
+  margin-top: 1rem;
+}
+.enquiry-modal .modal-error {
+  color: #e74c3c;
+  font-weight: 600;
+  text-align: center;
+  margin-top: 1rem;
+}

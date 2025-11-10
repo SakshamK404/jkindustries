@@ -1,0 +1,49 @@
+/* CompanyBrief.css - Modern, muted aesthetic */
+.company-brief-section {
+  padding: 3.5rem 1rem;
+  background: linear-gradient(120deg, #f3f4f6 0%, #e5e7eb 100%);
+  border-radius: 1.5rem;
+  box-shadow: 0 4px 24px rgba(31, 38, 135, 0.08);
+  margin: 2rem auto;
+  max-width: 1000px;
+}
+
+.company-brief-container {
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: center;
+  padding: 2rem 2rem 2rem 2rem;
+  background: rgba(245,245,245,0.85);
+  border-radius: 1rem;
+  box-shadow: 0 2px 8px rgba(20,184,166,0.06);
+}
+
+.company-brief-heading {
+  font-size: 2.25rem;
+  font-weight: 700;
+  color: #374151;
+  margin-bottom: 1.25rem;
+  position: relative;
+  letter-spacing: 0.01em;
+}
+
+.company-brief-heading::after {
+  content: "";
+  width: 60px;
+  height: 3px;
+  background: #a8a29e;
+  display: block;
+  margin: 0.5rem auto 0;
+  border-radius: 2px;
+}
+
+.company-brief-description {
+  font-size: 1.1rem;
+  line-height: 1.8rem;
+  color: #4b5563;
+  max-width: 700px;
+  margin: 0 auto;
+  padding: 1rem 0;
+  background: rgba(245,245,245,0.7);
+  border-radius: 0.75rem;
+}
