@@ -1,6 +1,6 @@
 
 import React from 'react';
-import './Products.css';
+import './ProductsPro.css';
 
 const products = [
   {
@@ -20,12 +20,12 @@ const products = [
 
 const Products = () => {
   return (
-    <section className="products-section" style={{ backgroundImage: "url('/photos/bg.jpg')" }}>
-      <div className="products-section__overlay"></div>
-      <div className="products-section__container">
-        <h2 className="products-section__heading">
-          Innovative Packaging Solutions
-        </h2>
+    <div className="products-bg">
+      <div className="products-glass">
+        <h2 className="products-title">Innovative Packaging Solutions</h2>
+        <p className="products-desc">
+          We offer a range of durable, customizable HDPE bottles and packaging solutions for agrochemical and industrial needs. Explore our products below:
+        </p>
         <div className="products-section__grid">
           {products.map((product, index) => (
             <div key={index} className="products-card">
@@ -35,7 +35,7 @@ const Products = () => {
           ))}
         </div>
       </div>
-    </section>
+    </div>
   );
 };
 

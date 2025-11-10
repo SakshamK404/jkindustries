@@ -48,12 +48,14 @@ export default function Navbar() {
           <a href="tel:8275019040" className="call-button px-4 py-2 rounded-full bg-gradient-to-r from-teal-400 to-blue-500 text-white font-semibold shadow-lg hover:scale-105 transition-transform duration-200">
             📞 Call 8275019040
           </a>
-          <button
+          <a
             className="enquiry-button px-4 py-2 rounded-full bg-gradient-to-r from-green-400 to-teal-500 text-white font-semibold shadow-lg hover:scale-105 transition-transform duration-200"
-            onClick={() => setEnquiryOpen(true)}
+            href="https://docs.google.com/forms/d/1OmMqayDjRAQpfI6hhIZlGiMLaGtcmBOdEdQNdw6R3kM/viewform"
+            target="_blank"
+            rel="noopener noreferrer"
           >
             📩 Send Enquiry
-          </button>
+          </a>
           {/* Mobile menu button */}
           <button
             className="mobile-menu-button md:hidden px-3 py-2 rounded-lg bg-white/60 shadow border border-gray-300 hover:bg-white"
@@ -91,8 +93,7 @@ export default function Navbar() {
         </div>
       </div>
 
-      {/* Enquiry Modal */}
-      <EnquiryModal open={enquiryOpen} onClose={() => setEnquiryOpen(false)} />
+  {/* Enquiry Modal removed for Google Form integration */}
     </header>
   );
 }
