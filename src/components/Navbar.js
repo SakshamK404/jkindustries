@@ -71,7 +71,7 @@ export default function Navbar() {
 
       {/* Main Navigation */}
       <div className={`main-nav ${menuOpen ? 'open' : ''}`}>
-        <nav className="nav-links">
+        <nav className="nav-links" style={{ display: 'flex', alignItems: 'center', gap: '2rem' }}>
           <Link to="/" className="nav-home" onClick={() => setMenuOpen(false)}>
             HOME
           </Link>

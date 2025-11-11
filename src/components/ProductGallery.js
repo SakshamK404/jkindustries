@@ -19,15 +19,29 @@ export default function ProductGallery() {
 
   return (
     <section className="product-gallery" id="products">
-      <h2 className="text-3xl font-bold text-center mb-12">Our Products</h2>
+      <div className="product-gallery__header">
+        <p className="product-gallery__eyebrow">Our Products</p>
+        <h2 className="product-gallery__title">Product Range</h2>
+        <p className="product-gallery__subtitle">Durable HDPE packaging built for performance and reliability</p>
+      </div>
       <div className="product-gallery__grid">
         {products.map((p) => (
           <motion.div
             key={p.id}
             className="product-card"
+            role="button"
+            tabIndex={0}
+            aria-label={`View details for ${p.name}`}
             onClick={() => {
               window.scrollTo(0, 0); // Scroll to top before navigating
               navigate(p.link);
+            }}
+            onKeyDown={(e) => {
+              if (e.key === 'Enter' || e.key === ' ') {
+                e.preventDefault();
+                window.scrollTo(0, 0);
+                navigate(p.link);
+              }
             }}
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -40,6 +54,11 @@ export default function ProductGallery() {
                 alt={p.name}
                 className="product-card__img"
               />
+              <div className="product-card__overlay">
+                <button className="product-card__cta" aria-label={`Open ${p.name}`}>
+                  View details →
+                </button>
+              </div>
             </div>
             <div className="product-card__name">{p.name}</div>
           </motion.div>

@@ -27,9 +27,10 @@ function App() {
           path="/"
           element={
             <>
-              <About />
+            <ProductGallery />
+              
               <Products />
-              <ProductGallery />
+              <About />
               <Contact />
             </>
           }

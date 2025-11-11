@@ -2,12 +2,44 @@
 /* Modern Product Gallery Styles */
 .product-gallery {
   padding: 4rem 2rem;
-  background: linear-gradient(135deg, #e8eaf6 0%, #f5f7fa 100%);
+  background: radial-gradient(1200px 600px at 10% 10%, rgba(160,170,220,0.12), transparent 60%),
+              radial-gradient(1000px 500px at 90% 0%, rgba(120,140,200,0.10), transparent 60%),
+              linear-gradient(135deg, #eef1f7 0%, #f8fafc 100%);
   border-radius: 2rem;
-  box-shadow: 0 8px 32px rgba(60, 60, 90, 0.08);
-  backdrop-filter: blur(2px);
+  box-shadow: 0 8px 32px rgba(60, 60, 90, 0.06);
   margin: 2rem auto;
   max-width: 1400px;
+}
+
+.product-gallery__header {
+  text-align: center;
+  margin-bottom: 2.5rem;
+}
+.product-gallery__eyebrow {
+  display: inline-block;
+  padding: 0.25rem 0.75rem;
+  font-size: 0.85rem;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  color: #6b7280;
+  background: rgba(107,114,128,0.08);
+  border: 1px solid rgba(107,114,128,0.18);
+  border-radius: 999px;
+  margin-bottom: 0.75rem;
+}
+.product-gallery__title {
+  font-size: 2.5rem;
+  font-weight: 800;
+  letter-spacing: 0.02em;
+  background: linear-gradient(90deg, #555d6b 0%, #2d3748 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  margin: 0.25rem 0 0.5rem;
+}
+.product-gallery__subtitle {
+  color: #6b7280;
+  font-size: 1rem;
 }
 
 .product-gallery__grid {
@@ -27,11 +59,37 @@
   display: flex;
   flex-direction: column;
   align-items: stretch;
+  outline: none;
+  position: relative;
 }
 .product-card:hover {
   box-shadow: 0 8px 32px rgba(60, 60, 90, 0.18);
   transform: translateY(-6px) scale(1.03);
   background: rgba(245,247,250,0.95);
+}
+.product-card:focus-visible {
+  box-shadow: 0 0 0 3px rgba(99,102,241,0.35), 0 8px 32px rgba(60, 60, 90, 0.18);
+}
+.product-card::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: 1.5rem;
+  padding: 1px;
+  background: linear-gradient(120deg, rgba(99,102,241,0.25), rgba(59,130,246,0.2));
+  -webkit-mask: 
+    linear-gradient(#000 0 0) content-box, 
+    linear-gradient(#000 0 0);
+  mask:
+    linear-gradient(#000 0 0) content-box,
+    linear-gradient(#000 0 0);
+  -webkit-mask-composite: xor;
+          mask-composite: exclude;
+  opacity: 0;
+  transition: opacity 0.2s;
+}
+.product-card:hover::before, .product-card:focus-visible::before {
+  opacity: 1;
 }
 
 .product-card__img-container {
@@ -42,6 +100,7 @@
   justify-content: center;
   background: linear-gradient(120deg, #e0e7ef 0%, #f5f7fa 100%);
   border-bottom: 1px solid rgba(180,180,200,0.10);
+  position: relative;
 }
 
 .product-card__img {
@@ -53,6 +112,40 @@
 }
 .product-card:hover .product-card__img {
   transform: scale(1.08) rotate(-2deg);
+}
+
+.product-card__overlay {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  padding: 0.75rem;
+  background: linear-gradient(180deg, rgba(0,0,0,0) 40%, rgba(0,0,0,0.35) 100%);
+  opacity: 0;
+  transform: translateY(6px);
+  transition: opacity 0.25s, transform 0.25s;
+}
+.product-card:hover .product-card__overlay,
+.product-card:focus-visible .product-card__overlay {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.product-card__cta {
+  appearance: none;
+  border: none;
+  border-radius: 999px;
+  padding: 0.5rem 1rem;
+  font-weight: 700;
+  background: linear-gradient(90deg, #6366f1 0%, #2563eb 100%);
+  color: #fff;
+  box-shadow: 0 2px 8px rgba(37,99,235,0.25);
+  cursor: pointer;
+}
+.product-card__cta:focus-visible {
+  outline: 2px solid #fff;
+  outline-offset: 2px;
 }
 
 .product-card__name {
@@ -68,16 +161,4 @@
   border-radius: 0 0 1.5rem 1.5rem;
 }
 
-.product-gallery h2 {
-  font-size: 2.5rem;
-  font-weight: 700;
-  text-align: center;
-  margin-bottom: 2.5rem;
-  color: #2d2d3a;
-  letter-spacing: 0.03em;
-  background: linear-gradient(90deg, #b2b7c2 0%, #6e7a8a 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-  /* text-fill-color: transparent; */
-}
+/* h2 handled by header styles */

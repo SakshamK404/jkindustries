@@ -1,0 +1,146 @@
+/* AloeVeraShape Product Page Styles */
+.aloevera-product-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2.5rem;
+  background: #fff;
+  border-radius: 1.5rem;
+  box-shadow: 0 8px 32px rgba(60,60,90,0.08);
+  padding: 2.5rem 2rem;
+  max-width: 1200px;
+  margin: 2rem auto;
+  align-items: flex-start;
+}
+.aloevera-product-gallery {
+  flex: 1 1 320px;
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+.aloevera-product-thumbs {
+  display: flex;
+  flex-direction: column;
+  gap: 0.7rem;
+}
+.aloevera-product-thumb {
+  width: 70px;
+  height: 70px;
+  object-fit: cover;
+  border-radius: 0.5rem;
+  border: 2px solid #eee;
+  cursor: pointer;
+  transition: border 0.2s;
+}
+.aloevera-product-thumb.selected,
+.aloevera-product-thumb:hover {
+  border-color: #a0331a;
+}
+.aloevera-product-main-img {
+  width: 340px;
+  height: 340px;
+  object-fit: contain;
+  border-radius: 1rem;
+  background: #f7f7f7;
+  box-shadow: 0 2px 12px rgba(60,60,90,0.10);
+}
+.aloevera-product-details {
+  flex: 1 1 400px;
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+.aloevera-product-title {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+  color: #222;
+}
+.aloevera-product-price-row {
+  display: flex;
+  align-items: center;
+  gap: 1.2rem;
+  font-size: 1.3rem;
+  margin-bottom: 0.5rem;
+}
+.aloevera-product-price {
+  color: #a0331a;
+  font-weight: 700;
+}
+.aloevera-product-link {
+  color: #a0331a;
+  font-weight: 500;
+  text-decoration: underline;
+  margin-left: 0.5rem;
+  cursor: pointer;
+}
+.aloevera-product-brochure {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 1rem;
+  margin-bottom: 0.7rem;
+}
+.aloevera-product-brochure-icon {
+  width: 24px;
+  height: 24px;
+}
+.aloevera-product-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 1rem;
+}
+.aloevera-product-table th,
+.aloevera-product-table td {
+  padding: 0.7rem 1rem;
+  border-bottom: 1px solid #eee;
+  text-align: left;
+  font-size: 1rem;
+}
+.aloevera-product-table th {
+  color: #444;
+  font-weight: 600;
+  background: #fafafa;
+}
+.aloevera-product-table td {
+  color: #222;
+}
+.aloevera-product-note {
+  font-size: 1rem;
+  color: #444;
+  margin-bottom: 0.5rem;
+}
+.aloevera-product-desc {
+  font-size: 1.08rem;
+  color: #222;
+  margin-bottom: 0.5rem;
+}
+.aloevera-product-call-btn {
+  align-self: flex-end;
+  background: #fff;
+  color: #a0331a;
+  border: 2px solid #a0331a;
+  font-weight: 700;
+  padding: 0.7rem 1.5rem;
+  border-radius: 0.5rem;
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+.aloevera-product-call-btn:hover {
+  background: #a0331a;
+  color: #fff;
+}
+@media (max-width: 900px) {
+  .aloevera-product-container {
+    flex-direction: column;
+    align-items: stretch;
+    padding: 1.2rem 0.5rem;
+  }
+  .aloevera-product-main-img {
+    width: 100%;
+    height: 220px;
+  }
+}
